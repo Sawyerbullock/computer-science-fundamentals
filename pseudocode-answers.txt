@@ -1,0 +1,66 @@
+/* Short Answer */
+
+1. Why do programmers use pseudocode.
+A: Pseudocode is an informal language that is used to develop algorithms
+and express what could should do without using any specific syntax.
+
+2. If you run pseudocode on your computer what would happen?
+A: Nothing. Pseudocode is not meant to be run on a computer.
+
+/* Programming Assignment */
+
+1. Create a function that takes two numbers and outputs the greater number.
+A: INPUT first numbers
+   INPUT second numbers
+   IF the first number is greater than the second number THEN
+     PRINT first numbers
+   ELSE IF the first number is smaller than the second number THEN
+     PRINT second number
+   ELSE
+     PRINT "Numbers are the same."
+   END IF
+
+2. Create a function that prints out the numbers from 1 to 100.
+A:  SET number to 1
+    WHILE number is less than or equal to 100
+      PRINT number
+      ADD 1 to number
+    END WHILE
+
+3. Create a function that searches for a specific entry in a phonebook.
+A:  GET phonebook
+    GET searchItem
+    FOR each item in phonebook
+      IF item is equal to searchItem
+        PRINT item
+      Else go to next item in phonebook
+      END IF
+      PRINT "No Matches"
+
+4.Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+A: I created the function in repl.it:
+   https://repl.it/@Sawyerbullock/UnfitTurquoiseSupercollider
+
+const phoneBook = [
+  {
+    name: "John Doe", number: "123-456-7890"
+  },
+  {
+    name: "Jane Doe", number: "098-765-4321"
+  },
+  {
+    name: "Joe Shmoe", number: "321-456-0987"
+  },
+]
+
+function searchName(name){
+  for (i = 0; i < phoneBook.length; i++){
+    if(phoneBook[i].name == name){
+      return phoneBook[i];
+    }
+  }
+  return "not found";
+}
+
+console.log(searchName("John Doe"))
+console.log(searchName("Mike Smith"))
