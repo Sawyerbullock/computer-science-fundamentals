@@ -35,7 +35,9 @@ A:  GET phonebook
         PRINT item
       Else go to next item in phonebook
       END IF
-      PRINT "not found"
+    END FOR
+    PRINT "not found"
+
 
 4.Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
 A: I created the function in repl.it:
