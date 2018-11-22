@@ -1,0 +1,114 @@
+/* Exercises */
+
+1. In your own words, explain what clean code is and why it is important.
+A: Clean code is written in a way that is easy to understand and make changes to in the future.
+   It is important, because usually you will be working as a part of a team of developers, and you
+   want to ensure that if anybody looks at your code to review or edit it, they can easily see what
+   the code is supposed to do, and why it's written the way that it is.
+
+2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+A: Although it may be slightly similar to the Toyota scenario, the first thought that came to my mind was Tesla's self driving cars.
+   This is definitely an area where there is no margin for error in the code. If there was a bug in the system that made the car brake
+   and come to a stop when there was an object in it's path, there would surely be some fatalities.
+
+3. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+A: No. The function name doesn't tell you at all the purpose fo the function, and there are too many comments.
+
+  FUNCTION convertTemperature(degrees, scale)
+    IF scale = "Fahrenheit" Then
+      SET convertedTemperature to (degrees - 32) * (5/9)
+      PRINT convertedTemperature
+    ELSE IF scale = "Celsius" Then
+      SET convertedTemperature to (degrees * 1.8000 + 32.00)
+      PRINT convertedTemperature
+    END IF
+  END FUNCTION
+
+4. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+A: No. You shouldn't abbreviate function names, and the `PRINT percentage` should be inside the IF statement.
+
+  FUNCTION calculatePercent(sum, total)
+    IF NOT(total = 0) Then
+      SET percentage to (sum / total) * 100
+      PRINT percentage
+    ELSE
+      PRINT "Sorry, cannot divide by 0"
+    END IF
+  END FUNCTION
+
+5.a.
+  FUNCTION checkOutCustomer(subTotal, discountRate)
+    SET totalDue to subTotal * discountRate + (subTotal * tax)
+    PRINT "Your total due is: " + totalDue
+    CALL getPayment with totalDue
+  END FUNCTION
+
+  FUNCTION getPayment(totalDue, paymentType)
+    IF paymentType = 'CASH' THEN
+      SET amount to cash received
+      PRINT "Change due: " + amount - totalDue
+    ELSE IF paymentType = 'CREDIT CARD' THEN
+      PRINT "Your credit card has been charged: " + totalDue
+    END IF
+  END FUNCTION
+
+b.
+  FUNCTION isGuestCleared(guest)
+    IF guest.accountActive AND guest.outstandingFees = 0 AND NOT(guest.hasOverdueBooks) THEN
+      RETURN true
+    ELSE
+      RETURN false
+    END IF
+  END FUNCTION
+
+  FUNCTION checkoutBook(book, guest)
+    IF isGuestCleared(guest) Then
+      APPEND book to guest.books
+      SET book.status to "Checked Out"
+      PRINT "Your books have been issued."
+    ELSE
+      PRINT "Unable to check out book."
+    END IF
+  END FUNCTION
+
+c.
+  CLASS BankAccount
+
+    FUNCTION displayBalance(accountHolder)
+      PRINT accountHolder.balance
+    END FUNCTION
+
+    FUNCTION deposit(amount, accountHolder)
+      ADD amount to accountHolder.balance
+    END FUNCTION
+
+    FUNCTION withdraw(amount, accountHolder)
+      IF accountHolder.balance > amount THEN
+        SUBTRACT amount from accountHolder.balance
+      END IF
+    END FUNCTION
+
+    FUNCTION offerCreditCard(accountHolder)
+      IF NOT(accountHolder.hasCreditCard) THEN
+        call creditCardOffer
+      END IF
+    END FUNCTION
+
+    FUNCTION checkCustomerStatus(accountHolder)
+      IF NOT(accountHolder.hasCheckingAccount) THEN
+        CALL offerCheckingAccout
+      END IF
+    END FUNCTION
+
+  END
+
+/* Programming Questions */
+
+6.Square Given an array of integers, find out whether the sum of the integers is a perfect square. If it is a perfect square, return the square root, otherwise return the sum.
+A: https://repl.it/@Sawyerbullock/SQUARE-clean-coding-question
+
+7. Duplicate
+A: https://repl.it/@Sawyerbullock/DUPLICATE-clean-code
+
+8. Anagram(Extra Credit)
+A: https://repl.it/@Sawyerbullock/ANAGRAM-extra-credit
