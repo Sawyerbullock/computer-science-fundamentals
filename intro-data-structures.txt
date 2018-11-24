@@ -1,0 +1,13 @@
+/* Assignment Questions  */
+
+1. A LINE OF PEOPLE AT AN AMUSEMENT PARK RIDE
+A: https://repl.it/@Sawyerbullock/Introduction-to-Data-Structures
+
+2. Provide another real-world example that you can model using a data structure.
+A: A batting order for a baseball team.
+
+3. How would your data structure allow developers to access and manipulate the data?
+A: We could store the data in an array. There would be 9 positions, for each spot in the batting order.
+   Then write code that would allow you to substitute players in and out of the lineup,
+   and also to shift players around inside of the array to change the order. There could also be some
+   code to check to see what position in the lineup a player is currently in.
