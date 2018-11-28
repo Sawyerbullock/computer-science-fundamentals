@@ -1,0 +1,21 @@
+/* Exercises */
+1. What are some pros and cons of using linked lists instead of arrays?
+A: Pros us using linked lists include not having to use any empty place-holders,
+   since nodes are dynamically instantiated, and they are memory independent, which
+   means, they can be stored in any available memory location, unlike arrays, which
+   must use contiguous locations in memory. However, since each node of a linked list
+   can exist anywhere in memory, it's not quite as efficient to access a specific
+   element within a linked list. You must go through the elements in order to find
+   what you're looking for, unlike arrays, which are indexed and can be accessed
+   immediately.
+
+2. Come up with a real world example of a linked list.
+A: The thing that came to me was a playlist. It would use up a lot of memory and
+   performance to have to shift the computers entire memory each time a song is
+   added to a playlist.
+
+/* Programming Questions */
+
+All answers show in repl.it link: https://repl.it/@Sawyerbullock/LinkedLists
+
+1. current is never defined in the pseudo-code. 
