@@ -1,0 +1,50 @@
+/*  Exercises */
+
+1. What is a binary tree and what makes it unique to other trees?
+A: Trees are data structures that consist of nodes contain a value and the ability
+   to point to adjacent nodes, with a root node at the top. In a binary tree, each
+   node can consist of up to 2 child nodes; left and right.
+
+2. What is a heuristic?
+A: A heuristic is a technique for solving  problem more quickly when classic methods
+   are too slow, or for finding an approximate solution when classic methods can't find
+   an exact solution.
+
+3. What is another problem besides the shortest-path problem that requires the use of
+   heuristics?
+A: In language recognition when analyzing the meaning of a user input, an algorithm tries
+   to make sense of the user inputs. Word associations, analysis of context, previous
+   search history and current trends/search engine statistics can be used in a heuristic
+   algorithm to speed up the search process.
+
+4. What is the difference between a depth-first search and a breadth-first search?
+A: A DFS pattern will travel along an entire branch until it ends, then go back to
+   the parent node and continue along a different branch until the search is complete.
+   A BFS pattern searches through nodes row by row, starting at the root node at the
+   top.
+
+5. Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+A: This would be a graph in which there is no designated start and end between one
+   node and another, and that doesn't loop back into itself. It also wouldn't assign a
+   cost of travel between two nodes.
+
+6. What kind of graph is a binary search tree?
+A: Undirected, a-cyclic, and unweighted
+
+/* Programming Questions */
+
+JS binary search tree implementation: https://repl.it/@Sawyerbullock/Binary-search-tree
+
+1. Given a Binary Search Tree and a value, write a function that checks to see whether
+   the value exists within the tree.
+A: Starting with the root node, I would check to see if the value is equal, greater than,
+   or less than the value of the root node. Then depending on the result of that check,
+   I would move either to the left or the right node, and repeat until the value is found,
+   or until I get to the end of the branch and determine it does not exist.
+
+2. Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the
+   distance between the two nodes.
+A: I would find the distance by first determining what the lowest common ancestor of the
+   2 nodes is. From there, I would figure out how many levels are between the LCA(lowest common
+   ancestor) and each given node. Once that is found, adding the levels between each of them
+   and the LCA together will give the total distance.
