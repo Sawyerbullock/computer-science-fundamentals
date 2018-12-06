@@ -1,12 +1,20 @@
 1. Using proper pseudo-code, describe the following primitive algorithms:
 A: Making Coffee:
      GET coffee grounds from cupboard
-     CLEAR coffee basket of any previous grounds
-     WASH coffee pot and basket
+     IF coffee basket has old grounds
+       CLEAR coffee basket of any previous grounds
+     END IF
+     IF coffee pot is dirty
+       WASH coffee pot
+     END IF
      PUT coffee filter in basket
-     PUT coffee grounds in basket
+     WHILE basket is not full
+       PUT coffee grounds in basket
+     END WILE
      PUT basket in coffee maker
-     FILL coffee maker with water
+     WHILE coffee maker is not full
+       FILL coffee maker with water
+     END WHILE
      PUT coffee pot into coffee maker
      START brew cycle
 
@@ -25,10 +33,14 @@ A: Making Coffee:
      GET mug from cupboard
      PUT tea bag in mug
      GET kettle from cupboard
-     FILL kettle with water
+     WHILE kettle is not full
+       FILL kettle with water
+     END WHILE
      PLACE kettle on stove
      LIGHT burner on stove
-     BOIL water in kettle
+     WHILE water is not boiling
+       HEAT water in kettle
+     END WHILE
      TURN OFF burner
      POUR water into mug
 
