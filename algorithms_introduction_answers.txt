@@ -1,0 +1,59 @@
+1. Using proper pseudo-code, describe the following primitive algorithms:
+A: Making Coffee:
+     GET coffee grounds from cupboard
+     CLEAR coffee basket of any previous grounds
+     WASH coffee pot and basket
+     PUT coffee filter in basket
+     PUT coffee grounds in basket
+     PUT basket in coffee maker
+     FILL coffee maker with water
+     PUT coffee pot into coffee maker
+     START brew cycle
+
+   Washing Dishes:
+     START hot water
+     GET sponge
+     ADD soap to sponge
+     FOR each dirty dish
+       SCRUB dish with sponge
+       RINSE dish in water
+       PUT dish in drying rack
+     END FOR
+
+   Making Tea:
+     GET tea bag from cupboard
+     GET mug from cupboard
+     PUT tea bag in mug
+     GET kettle from cupboard
+     FILL kettle with water
+     PLACE kettle on stove
+     LIGHT burner on stove
+     BOIL water in kettle
+     TURN OFF burner
+     POUR water into mug
+
+2. As with the knot algorithm, there may be more than one way to solve the
+   problem. It is essential to try to pick the best algorithm for a situation.
+   Name three companies who created an algorithm that made them successful,
+   e.g., Google's search algorithm. It doesn't need to be a tech example (such
+   as a recipe or manufacturing a product). Google's algorithm produces more
+   relevant results than other search engines; what about each of your cases
+   make them stand out?
+A: Match.com's algorithm for finding compatibility between 2 people seems to have
+   made them very successful. They are the longest standing dating site I can think
+   of, so it must be working well!
+
+   Pinterest's algorithm for providing content based on a users interest and past
+   likes is also very successful. It has way more users than any other similar platform,
+   so it must do a better job determining what it's users want to see.
+
+   Netflix uses an algorithm to suggest movies and TV shows you might like based on
+   your content history. They have a giant collection, and do a great job of curating
+   lists of content similar to that.
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient
+   algorithm.
+A: An efficient algorithm should solve a problem as quickly and with as little work
+   as possible. Obviously they should also find an accurate solution. It would also
+   help if the logic was clean and easy to follow, so that the algorithm is easy to
+   update and maintain.
