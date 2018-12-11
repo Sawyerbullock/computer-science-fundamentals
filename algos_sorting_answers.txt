@@ -1,0 +1,61 @@
+/* Exercises */
+
+1. Write pseudocode for bubble sort.
+A:  FUNCTION bubbleSort(collection)
+      REPEAT
+        SET swapped to false
+        FOR i = FIRST INDEX of collection to LAST INDEX of collection -1
+          IF collection[i] > collection[i + 1] THEN
+            SET tmp to collection[i]
+            SET collection[i] to collection[i + 1]
+            SET collection[i + 1] to tmp
+            SET swapped to true
+          END IF
+        END FOR
+      UNTIL swapped is FALSE
+      RETURN collection
+    END FUNCTION
+
+2. Write pseudocode for quicksort.
+A:  FUNCTION quickSort(collection, low, high)
+      IF(low < high) THEN
+        SET pivot to partition(collection, low, high)
+        CALL quickSort(collection, low, pivot - 1)
+        CALL quickSort(collection, pivot + 1, high)
+      END IF
+    END FUNCTION
+
+    FUNCTION partition(collection, low, high)
+      SET pivot to collection[low]
+      SET leftwall to low
+      FOR i = (low + 1) to high
+        IF(collection[i] < pivot) THEN
+          SET leftwall to leftwall + 1
+          CALL swap(collection, i, leftwall)
+        END IF
+      END FOR
+      CALL swap(collection, low, leftwall)
+    END FUNCTION
+
+    FUNCTION swap(collection, i, j)
+      SET temp to collection[i]
+      SET collection[i] to collection[j]
+      SET collection[j] to temp
+    END FUNCTION
+
+3. We talked about time complexity in a previous checkpoint, and how to get
+   an idea of the efficiency of an algorithm. After looking at the pseudocode
+   for the above sorting methods, identify why merge sort and quick sort are
+   much more efficient than the others. Walking through each algorithm with a
+   few sample collections may help.
+A: Merge sort and quick sort perform a lot fewer comparisons than the other
+   methods. They do this by utilizing the divide and conquer mentality.
+
+4. All of the sorts addressed in this checkpoint are known as comparison sorts.
+   Research bucket sort and explain how it works. What is the ideal input for
+   bucket sort?
+A: Bucket sort works by distributing the elements in a given array into a number
+   of "buckets". Then each bucket is sorted individually either by another sorting
+   algorithm or by calling bucket sort recursively. Then put all the sorted
+   elements back in the original array. Bucket search works best with an input
+   that is uniformly distributed over a given range.
